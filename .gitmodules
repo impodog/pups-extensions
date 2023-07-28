@@ -1,0 +1,3 @@
+[submodule "PourUPScript"]
+	path = PourUPScript
+	url = https://github.com/impodog/PourUPScript.git

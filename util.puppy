@@ -1,0 +1,4 @@
+func assert_def:
+    param value name
+    if_not is_def value:
+        throw "Missing component " name

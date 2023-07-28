@@ -1,0 +1,13 @@
+#include ../util.puppy
+
+import_lib "." "sys"
+
+assert_def is_toplevel "sys.is_toplevel"
+assert_def format "sys.format"
+assert_def find "sys.find"
+
+assert_def same "sys.same"
+assert_def swap "sys.swap"
+
+assert_def Ver "sys.Ver"
+assert_def version "sys.version"
