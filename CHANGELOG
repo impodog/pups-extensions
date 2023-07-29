@@ -1,3 +1,7 @@
+v0.1.1
+- Change sys.format formatting function
+- Add sys.ptr_to_str, sys.is_unique, sys.count_same
+
 v0.1.0
 - Add extension os
 - Better namespace for extensions

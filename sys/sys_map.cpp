@@ -25,7 +25,7 @@ namespace pups_extension::sys {
         }
         std::string result;
         for (const auto &item: map->get_all_objects()) {
-            result.append(item.first.str() + ": " + item.second->str() + "\n");
+            result.append(item.first.str() + ": " + item.second->repr() + "\n");
         }
         result = result.substr(0, result.size() - 1);
         return std::make_shared<pups::String>(result);

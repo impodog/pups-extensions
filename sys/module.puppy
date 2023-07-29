@@ -8,6 +8,9 @@ assert_def find "sys.find"
 
 assert_def same "sys.same"
 assert_def swap "sys.swap"
+assert_def ptr_to_str "sys.ptr_to_str"
+assert_def is_unique "sys.is_unique"
+assert_def count_same "sys.count_same"
 
 assert_def Ver "sys.Ver"
 assert_def version "sys.version"
