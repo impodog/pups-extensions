@@ -6,8 +6,9 @@
 
 namespace pups_extension::sys {
     class Version : public pups::HasMethods {
-        int major, minor, bugfix;
     public:
+        int major, minor, bugfix;
+
         explicit Version(const std::string &version) {
             int status = 0;
             std::string tmp;
@@ -100,13 +101,47 @@ namespace pups_extension::sys {
         return pups::pending;
     }
 
+    pups::ObjectPtr ver_major(Version &version, pups::FunctionArgs &args, pups::Map *map) {
+        if (!args.empty()) {
+            map->throw_error(
+                    std::make_shared<pups::library::ArgumentError>("Version.major requires no arguments."));
+        } else {
+            return std::make_shared<pups::Int>(version.major);
+        }
+        return pups::pending;
+    }
+
+    pups::ObjectPtr ver_minor(Version &version, pups::FunctionArgs &args, pups::Map *map) {
+        if (!args.empty()) {
+            map->throw_error(
+                    std::make_shared<pups::library::ArgumentError>("Version.minor requires no arguments."));
+        } else {
+            return std::make_shared<pups::Int>(version.minor);
+        }
+        return pups::pending;
+    }
+
+    pups::ObjectPtr ver_bugfix(Version &version, pups::FunctionArgs &args, pups::Map *map) {
+        if (!args.empty()) {
+            map->throw_error(
+                    std::make_shared<pups::library::ArgumentError>("Version.bugfix requires no arguments."));
+        } else {
+            return std::make_shared<pups::Int>(version.bugfix);
+        }
+        return pups::pending;
+    }
+
     using VersionFunction = std::function<pups::ObjectPtr(Version &, pups::FunctionArgs &args, pups::Map *map)>;
     using VersionFunctionMap = pups::library::IdMap<VersionFunction>;
 
-    pups::Id id_satisfies{"", "satisfies"};
+    pups::Id id_satisfies{"", "satisfies"},
+            id_major{"", "get_major"}, id_minor{"", "get_minor"}, id_bugfix{"", "get_bugfix"};
 
     VersionFunctionMap version_functions = {
-            {id_satisfies, ver_satisfies}
+            {id_satisfies, ver_satisfies},
+            {id_major,     ver_major},
+            {id_minor,     ver_minor},
+            {id_bugfix,    ver_bugfix}
     };
 
     pups::FunctionCore Version::get_method(const pups::Id &name) {

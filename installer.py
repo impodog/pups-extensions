@@ -9,6 +9,8 @@ FILE_DIR = os.path.split(__file__)[0]
 PUPPY_NAME = "module"
 if sys.platform == "win32":
     LIB_EXT = ".dll"
+elif sys.platform == "darwin":
+    LIB_EXT = ".dylib"
 else:
     LIB_EXT = ".so"
 
@@ -82,6 +84,7 @@ def main():
     if use is None:
         use = os.path.join(FILE_DIR, "PourUPScript")
     work(source, out, use, generator)
+    print("Installing package %s completed." % os.path.basename(source))
 
 
 if __name__ == "__main__":

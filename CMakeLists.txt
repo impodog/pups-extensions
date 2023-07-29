@@ -10,3 +10,6 @@ project(test)
 add_executable(test ext_test.cpp)
 
 target_link_libraries(test pups_Lib)
+
+add_subdirectory(sys)
+add_subdirectory(os)

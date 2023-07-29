@@ -1,3 +1,9 @@
+v0.1.0
+- Add extension os
+- Better namespace for extensions
+- Support sys.Ver.get_<member> series of functions
+- Add support for Apple ".dylib" files
+
 v0.0.1
 - Initialize project components
 - Add one extension: sys

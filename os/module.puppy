@@ -1,0 +1,20 @@
+#include ../util.puppy
+
+import_lib "." "os"
+
+assert_def platform "os.platform"
+
+assert_def make_dir "os.make_dir"
+assert_def remove "os.remove"
+assert_def remove_all "os.remove_all"
+assert_def rename "os.rename"
+assert_def abs_path "os.abs_path"
+assert_def join_path "os.join_path"
+assert_def my_path "os.my_path"
+
+assert_def DirEntry "os.DirEntry"
+
+assert_def DirIter "os.DirIter"
+assert_def DirRecurIter "os.DirRecurIter"
+
+assert_def run "os.run"

@@ -7,13 +7,14 @@
 
 int main(int argc, char **argv) {
     std::cout << "Now executing in " << argv[0] << std::endl;
-    pups::Constants constants("test/out/main.con");
+    pups::Constants constants("test/main.con");
     pups::init(constants);
 
-    auto control = std::make_unique<pups::Control>("test/out/main.pups", constants);
+    auto control = std::make_unique<pups::Control>("test/main.pups", constants);
     control->run();
     control.reset();
 
     pups::quit();
+
     return 0;
 }
