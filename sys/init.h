@@ -2,8 +2,8 @@
 // Created by impodog on 7/28/2023.
 //
 
-#ifndef TEST_INIT_H
-#define TEST_INIT_H
+#ifndef SYS_INIT_H
+#define SYS_INIT_H
 
 #include "pups.h"
 
@@ -15,4 +15,4 @@ namespace pups_extension::sys {
     void init_ver(pups::PackageHandler &handler);
 }
 
-#endif //TEST_INIT_H
+#endif //SYS_INIT_H

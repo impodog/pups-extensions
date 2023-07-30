@@ -1,3 +1,8 @@
+v0.2.0
+- Add extension alg
+- Add default makefiles for different platforms
+- Fix header flag naming mistake
+
 v0.1.1
 - Change sys.format formatting function
 - Add sys.ptr_to_str, sys.is_unique, sys.count_same

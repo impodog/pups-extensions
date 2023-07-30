@@ -2,8 +2,8 @@
 // Created by impodog on 7/28/2023.
 //
 
-#ifndef TEST_INIT_H
-#define TEST_INIT_H
+#ifndef OS_INIT_H
+#define OS_INIT_H
 
 #include "pups.h"
 
@@ -44,4 +44,4 @@ namespace pups_extension::os {
     void init_cmd(pups::PackageHandler &handler);
 }
 
-#endif //TEST_INIT_H
+#endif //OS_INIT_H

@@ -9,10 +9,13 @@ FILE_DIR = os.path.split(__file__)[0]
 PUPPY_NAME = "module"
 if sys.platform == "win32":
     LIB_EXT = ".dll"
+    DEFAULT_GENERATOR = "MinGW Makefiles"
 elif sys.platform == "darwin":
     LIB_EXT = ".dylib"
+    DEFAULT_GENERATOR = "Unix Makefiles"
 else:
     LIB_EXT = ".so"
+    DEFAULT_GENERATOR = "Unix Makefiles"
 
 
 def stem(path: str):
@@ -75,7 +78,7 @@ def main():
     parser.add_argument("--use", "-u", type=str,
                         help="The PourUPScript path that is used. Defaults to PourUPScript under the parent directory of this file.", default=None)
     parser.add_argument(
-        "--generator", help="The generator that cmake uses. Defaults to \"MinGW Makefiles\"", default="MinGW Makefiles")
+        "--generator", help="The generator that cmake uses. Defaults to \"%s\"" % DEFAULT_GENERATOR, default=DEFAULT_GENERATOR)
     args = parser.parse_args()
     source = args.source
     out = args.out

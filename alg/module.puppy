@@ -1,0 +1,12 @@
+#include ../util.puppy
+
+import_lib "." "alg"
+
+assert_def sort "alg.sort"
+assert_def stable_sort "alg.stable_sort"
+assert_def merge "alg.merge"
+
+assert_def rd_int "alg.rd_int"
+assert_def rd_float "alg.rd_float"
+assert_def shuffle "alg.shuffle"
+assert_def choose "alg.choose"
