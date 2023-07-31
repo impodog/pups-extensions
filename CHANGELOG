@@ -1,3 +1,8 @@
+v0.3.0
+- Add extension math
+- Update installer to allow using cpp-puppy compiler
+- Change module configuration puppy file naming
+
 v0.2.0
 - Add extension alg
 - Add default makefiles for different platforms

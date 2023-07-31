@@ -1,0 +1,27 @@
+#include ../util.puppy
+
+import_lib "." "math"
+
+assert_def imax "math.imax"
+assert_def imin "math.imin"
+assert_def fmax "math.fmax"
+assert_def fmin "math.fmin"
+assert_def pi "math.pi"
+assert_def e "math.e"
+assert_def inf "math.inf"
+assert_def nan "math.nan"
+
+assert_def sin "math.sin"
+assert_def cos "math.cos"
+assert_def tan "math.tan"
+assert_def asin "math.asin"
+assert_def acos "math.acos"
+assert_def atan "math.atan"
+assert_def atan2 "math.atan2"
+assert_def abs "math.abs"
+assert_def ceil "math.ceil"
+assert_def floor "math.floor"
+assert_def round "math.round"
+
+assert_def itof "math.itof"
+assert_def ftoi "math.ftoi"
